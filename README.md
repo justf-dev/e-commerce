@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # e-commerce
->>>>>>> c6e853e8aef196d05fc1a8a26c88f6e31489af1f
-=======
+
 # Laravel E-commerce Platform
 
 A complete, full-featured e-commerce platform built with Laravel 12, featuring user authentication, role-based access control, shopping cart functionality, and comprehensive admin dashboard.
