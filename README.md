@@ -142,6 +142,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 If you encounter any issues or have questions, please open an issue on GitHub.
-=======
+
 # e-commerce
->>>>>>> c6e853e8aef196d05fc1a8a26c88f6e31489af1f
+
