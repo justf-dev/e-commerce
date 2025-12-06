@@ -1,59 +1,149 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<<<<<<< HEAD
+# e-commerce
+>>>>>>> c6e853e8aef196d05fc1a8a26c88f6e31489af1f
+=======
+# Laravel E-commerce Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A complete, full-featured e-commerce platform built with Laravel 12, featuring user authentication, role-based access control, shopping cart functionality, and comprehensive admin dashboard.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Customer Features
+- **User Authentication** - Registration, login, email verification
+- **Product Browsing** - Browse products by categories
+- **Shopping Cart** - Add, update, remove items from cart
+- **Checkout Process** - Complete order placement with address management
+- **Order History** - View past orders and order details
+- **Profile Management** - Update personal information and password
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Admin Features
+- **Dashboard** - Overview with user information and statistics
+- **Product Management** - CRUD operations for products with image uploads
+- **Category Management** - Organize products into categories
+- **Order Management** - View and update order statuses
+- **User Role Management** - Admin and customer role-based access
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Technical Features
+- **Laravel 12** - Latest Laravel framework
+- **Role-based Middleware** - Secure admin access control
+- **File Uploads** - Product image management with storage links
+- **Database Migrations** - Complete database schema
+- **Seeders** - Sample data for development
+- **Responsive UI** - Tailwind CSS styling
+- **RESTful API** - Well-structured controllers and routes
 
-## Learning Laravel
+## 🛠️ Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/justf-dev/e-commerce.git
+   cd e-commerce
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Install dependencies**
+   ```bash
+   composer install
+   npm install
+   ```
 
-## Laravel Sponsors
+3. **Environment setup**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. **Database setup**
+   ```bash
+   # Configure your database in .env file
+   php artisan migrate
+   php artisan db:seed
+   ```
 
-### Premium Partners
+5. **Storage link**
+   ```bash
+   php artisan storage:link
+   ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+6. **Build assets**
+   ```bash
+   npm run build
+   ```
 
-## Contributing
+7. **Start the server**
+   ```bash
+   php artisan serve
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📋 Requirements
 
-## Code of Conduct
+- PHP 8.2+
+- Composer
+- Node.js & NPM
+- MySQL/PostgreSQL/SQLite
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🗂️ Project Structure
 
-## Security Vulnerabilities
+```
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Admin/          # Admin controllers
+│   │   ├── Auth/           # Authentication controllers
+│   │   └── ...             # Customer controllers
+│   ├── Models/             # Eloquent models
+│   └── Middleware/         # Custom middleware
+├── database/
+│   ├── migrations/         # Database migrations
+│   └── seeders/            # Database seeders
+├── resources/
+│   ├── views/              # Blade templates
+│   └── css/js/             # Frontend assets
+├── routes/
+│   └── web.php             # Route definitions
+└── storage/
+    └── app/public/         # File uploads
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔐 Default Admin Account
 
-## License
+After seeding the database, you can login with:
+- **Email:** admin@example.com
+- **Password:** password
+- **Role:** admin
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📝 API Endpoints
+
+### Public Routes
+- `GET /` - Home page
+- `GET /products` - Product listing
+- `GET /categories/{category}` - Category products
+- `GET /products/{slug}` - Product details
+
+### Authenticated Routes
+- `GET /cart` - Shopping cart
+- `POST /checkout/process` - Process order
+- `GET /orders` - Order history
+
+### Admin Routes (Role: admin required)
+- `GET /admin/dashboard` - Admin dashboard
+- `GET /admin/products` - Product management
+- `GET /admin/categories` - Category management
+- `GET /admin/orders` - Order management
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+If you encounter any issues or have questions, please open an issue on GitHub.
+=======
+# e-commerce
+>>>>>>> c6e853e8aef196d05fc1a8a26c88f6e31489af1f
